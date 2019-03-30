@@ -1,0 +1,3 @@
+[submodule "asm3"]
+	path = asm3
+	url = https://github.com/bobintetley/asm3
