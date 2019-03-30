@@ -1,5 +1,7 @@
 # GCP Kubernetes Setup
 
+## Create Cluster
+
 We'll start by firing up a new GKE cluster
 
 ```bash
@@ -8,6 +10,16 @@ gcloud container clusters create devopstar-gke-clst-1 \
     --num-nodes 2 \
     --machine-type f1-micro \
     --region australia-southeast1
+```
+
+## Connect to Existing
+
+You can grab the connection command from the [GKE console](https://console.cloud.google.com/kubernetes/list) but it should look like something similar to below (replace the project name obviously).
+
+```bash
+gcloud container clusters get-credentials devopstar-gke-clst-1 \
+    --region australia-southeast1 \
+    --project arctic-bee-236107
 ```
 
 ## Get Info
