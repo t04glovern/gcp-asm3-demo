@@ -2,6 +2,14 @@
 
 Going through the steps required to migrate and host Animal Shelter Manager (ASM3) on Google Cloud.
 
+## Setup
+
+Pull down project submodules
+
+```bash
+git submodule update --init --recursive
+```
+
 ## Instructions
 
 - [01 - GCP Setup](instructions/01-gcp-setup.md)

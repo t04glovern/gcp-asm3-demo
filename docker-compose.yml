@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  postgres:
+    environment:
+    - POSTGRES_PASSWORD=postgres
+    image: postgres
+    restart: always
+    ports:
+    - 5432:5432
+    volumes:
+    - ./lib/postgres-init.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+
+  asm3:
+    build: ./asm3
+    image: asm3
+    ports:
+      - 5000:5000
+    volumes:
+      - ./lib/asm3.conf.local:/etc/asm3.conf
