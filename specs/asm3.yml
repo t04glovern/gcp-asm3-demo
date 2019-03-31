@@ -8,11 +8,11 @@ data:
     # ASM3 example configuration file
 
     # The base URL to the ASM installation as seen by the client (should not end with /)
-    base_url = http://35.244.65.127
+    base_url = http://localhost
 
     # The URL to asm's service endpoint to be shown in online forms screen
     # (typically base_url + /service)
-    service_url = http://35.244.65.127/service
+    service_url = http://localhost/service
 
     # The language to use before a locale has been configured in the database
     locale = en
@@ -34,7 +34,7 @@ data:
 
     # Database info
     db_type = POSTGRESQL # MYSQL, POSTGRESQL, SQLITE or DB2
-    db_host = 10.35.252.240
+    db_host = postgres.default.svc.cluster.local
     db_port = 5432
     db_username = asm3
     db_password = asm3

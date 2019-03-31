@@ -6,9 +6,11 @@ We'll start by firing up a new GKE cluster
 
 ```bash
 # https://cloud.google.com/sdk/gcloud/reference/container/clusters/create
+# `gcloud container get-server-config` to get a machine type list
 gcloud container clusters create devopstar-gke-clst-1 \
     --num-nodes 2 \
-    --machine-type f1-micro \
+    --cluster-version 1.12.6-gke.7 \
+    --machine-type g1-small \
     --region australia-southeast1
 ```
 
@@ -28,11 +30,11 @@ gcloud container clusters get-credentials devopstar-gke-clst-1 \
 
 ```bash
 $ kubectl cluster-info
-# Kubernetes master is running at https://35.201.7.71
-# GLBCDefaultBackend is running at https://35.201.7.71/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy
-# Heapster is running at https://35.201.7.71/api/v1/namespaces/kube-system/services/heapster/proxy
-# KubeDNS is running at https://35.201.7.71/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-# Metrics-server is running at https://35.201.7.71/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
+# Kubernetes master is running at https://XXX.XXX.XXX.XXX
+# GLBCDefaultBackend is running at https://XXX.XXX.XXX.XXX/api/v1/namespaces/kube-system/services/default-http-backend:http/proxy
+# Heapster is running at https://XXX.XXX.XXX.XXX/api/v1/namespaces/kube-system/services/heapster/proxy
+# KubeDNS is running at https://XXX.XXX.XXX.XXX/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+# Metrics-server is running at https://XXX.XXX.XXX.XXX/api/v1/namespaces/kube-system/services/https:metrics-server:/proxy
 ```
 
 ### Get Nodes
@@ -40,12 +42,12 @@ $ kubectl cluster-info
 ```bash
 $ kubectl get nodes
 # NAME                                                  STATUS   ROLES    AGE   VERSION
-# gke-devopstar-gke-clst-1-default-pool-2e1439f4-hr9s   Ready    <none>   58s   v1.11.7-gke.12
-# gke-devopstar-gke-clst-1-default-pool-2e1439f4-pnqj   Ready    <none>   1m    v1.11.7-gke.12
-# gke-devopstar-gke-clst-1-default-pool-5a44aa0a-cdml   Ready    <none>   56s   v1.11.7-gke.12
-# gke-devopstar-gke-clst-1-default-pool-5a44aa0a-lcb8   Ready    <none>   53s   v1.11.7-gke.12
-# gke-devopstar-gke-clst-1-default-pool-5b4726d0-ndwj   Ready    <none>   1m    v1.11.7-gke.12
-# gke-devopstar-gke-clst-1-default-pool-5b4726d0-nw85   Ready    <none>   1m    v1.11.7-gke.12
+# gke-devopstar-gke-clst-1-default-pool-2e1439f4-hr9s   Ready    <none>   58s   v1.12.6-gke.7
+# gke-devopstar-gke-clst-1-default-pool-2e1439f4-pnqj   Ready    <none>   1m    v1.12.6-gke.7
+# gke-devopstar-gke-clst-1-default-pool-5a44aa0a-cdml   Ready    <none>   56s   v1.12.6-gke.7
+# gke-devopstar-gke-clst-1-default-pool-5a44aa0a-lcb8   Ready    <none>   53s   v1.12.6-gke.7
+# gke-devopstar-gke-clst-1-default-pool-5b4726d0-ndwj   Ready    <none>   1m    v1.12.6-gke.7
+# gke-devopstar-gke-clst-1-default-pool-5b4726d0-nw85   Ready    <none>   1m    v1.12.6-gke.7
 ```
 
 ### Kubctl Config
@@ -58,7 +60,7 @@ $ kubectl config view
 # clusters:
 # - cluster:
 #     certificate-authority-data: DATA+OMITTED
-#     server: https://35.201.7.71
+#     server: https://XXX.XXX.XXX.XXX
 #   name: gke_arctic-bee-236107_australia-southeast1_devopstar-gke-clst-1
 # contexts:
 # - context:
