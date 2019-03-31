@@ -24,7 +24,7 @@ $ gcloud auth configure-docker
 
 ## Create Container Registery
 
-Navigate to [https://console.cloud.google.com/gcr/images](https://console.cloud.google.com/gcr/images) and ensure that the Container Registery API is enabled
+Navigate to [https://console.cloud.google.com/gcr/images](https://console.cloud.google.com/gcr/images) and ensure that the Container Registry API is enabled
 
 Now we have to tag out ASM3 image with the correct format for the Google repository. [Following the guide here](https://cloud.google.com/container-registry/docs/pushing-and-pulling) is the best way to ensure its setup correctly for your region
 

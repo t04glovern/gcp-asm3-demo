@@ -7,6 +7,8 @@ Going through the steps required to migrate and host Animal Shelter Manager (ASM
 Pull down project submodules
 
 ```bash
+git clone https://github.com/t04glovern/gcp-asm3-demo.git
+cd gcp-asm3-demo
 git submodule update --init --recursive
 ```
 
@@ -17,7 +19,7 @@ git submodule update --init --recursive
 - [03 - Build ASM3 Docker](instructions/03-asm3-docker.md)
 - [04 - GCR Setup](instructions/04-gcr-setup.md)
 - [05 - Pod Deployment](instructions/05-pod-deploy.md)
-- [06 - Helm Setup](instructions/06-helm-setup.md)
+- [06 - Helm Setup [TODO]](instructions/06-helm-setup.md)
 
 ## Attribution
 
