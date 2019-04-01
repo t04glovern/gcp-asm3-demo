@@ -1,0 +1,30 @@
+info:
+  description: A simple replicated service in a Kubernetes cluster.
+  author: Google, Inc.
+
+required:
+- clusterType
+
+properties:
+  clusterType:
+    type: string
+    description: Type for cluster to deploy into.
+  image:
+    type: string
+    description: Docker image to run.
+  port:
+    type: integer
+    description: Port on which service runs.
+    default: 5432
+  postgresUser:
+    type: string
+    description: Postgres User
+    default: asm3
+  postgresPass:
+    type: string
+    description: Postgres Pass
+    default: asm3
+  postgresDb:
+    type: string
+    description: Postgres DB
+    default: asm

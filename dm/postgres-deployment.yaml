@@ -1,0 +1,9 @@
+imports:
+- path: postgres-deployment.py
+
+resources:
+- name: postgres
+  type: postgres-deployment.py
+  properties:
+    clusterType: <cluster-type>
+    image: postgres

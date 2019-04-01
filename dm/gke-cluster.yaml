@@ -1,0 +1,8 @@
+imports:
+- path: gke-cluster.py
+
+resources:
+- name: devopstar-gke-clst-1
+  type: gke-cluster.py
+  properties:
+    zone: ZONE_TO_RUN
